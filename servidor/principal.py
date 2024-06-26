@@ -18,3 +18,8 @@ def hello_world():
 @app.route("/")
 def get_feedbacks():
 	return jsonify(feedbacks)
+
+@app.route("/feedback", methods=['POST'])
+def add_feedback():
+	feedbacks.append(request.get_json())
+	return '', 204
