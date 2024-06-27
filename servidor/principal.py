@@ -26,12 +26,6 @@ def add_feedback():
 
 @app.route("/feedback", methods=['PUT'])
 def reset_feedback():
-	feedbacks=[
-		{ 
-		"title": "Experienced salespeople",
-		"name": "Alex H.",
-		"date": "2020-02-02",
-		"feedback": "It was great to talk to the salespeople in the team"
-		}
-	]
+	feedbacks.clear()
+	feedbacks.append(request.get_json())
 	return '', 204
