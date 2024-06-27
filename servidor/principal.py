@@ -34,4 +34,4 @@ def reset_feedback():
 		"feedback": "It was great to talk to the salespeople in the team"
 		}
 	]
-	return jsonify(feedbacks)
+	return '', 204
